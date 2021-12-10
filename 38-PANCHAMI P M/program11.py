@@ -1,7 +1,9 @@
-file=open('sample.txt','x')
+file=open('eg.txt','r')
 count=0
-for line in file:
-    if line!="\n":
+content=file.read()
+list=content.split("\n")
+for i in list:
+    if i:
         count+=1
-file.close()
+print("number of lines")
 print(count)
